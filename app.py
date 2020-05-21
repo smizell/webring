@@ -4,6 +4,8 @@ import random
 
 app = Flask(__name__)
 
+# Please pick [a-z] for the id.
+# Pick a URL where you want the redirect to go.
 sites = [
     {
         'id': 'smizell',
