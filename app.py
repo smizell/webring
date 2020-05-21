@@ -11,6 +11,10 @@ sites = [
         'id': 'smizell',
         'url': 'https://smizell.com'
     },
+    {
+        'id': 'honzajavorek',
+        'url': 'https://honzajavorek.cz/blog/'
+    },
 ]
 
 def next_site(site_id):
