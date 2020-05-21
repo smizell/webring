@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Heroku
+      uses: AkhileshNS/heroku-deploy@v3.0.4
+      with:
+        # This will be used for authentication. You can find it in your heroku homepage account settings
+        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+        # Email that you use with heroku
+        heroku_email: ${{ secrets.HEROKU_EMAIL }}
+        # The appname to use for deploying/updating
+        heroku_app_name: webring
+        # The branch that you would like to deploy to Heroku
+        branch: master # optional, default is HEAD
